@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/SIT725GroupProject
+      - NODE_ENV=production
+      - JWT_SECRET="default_secret"
+    depends_on:
+      - mongo
+    networks:
+      - app-network
+
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+    restart: always
+
+  mongo:
+    image: mongo
+    container_name: mongo_sit725
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+    restart: always
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local

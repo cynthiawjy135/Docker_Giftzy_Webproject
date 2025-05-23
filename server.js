@@ -35,6 +35,13 @@ connectDB();
 
 app.use('/', routes);
 
+app.get('/api/student', (req, res) => {
+    res.json({
+        name: "Cynthia Wijaya",
+        studentId: "225138694" 
+    });
+});
+
 
 const server = http.createServer(app);
 
