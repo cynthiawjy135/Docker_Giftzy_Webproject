@@ -40,12 +40,12 @@
                 <p style="font-size: 14px; margin-bottom: 10px;" class="truncate"><%= post.description %></p>
                 <% if (post.total_likes == 0) { %>
                 <p></p>
-                <% } else {%>
+                <% } else { %>
                 <p style="color: var(--main-color);display: flex; align-items: center;"><i style="font-size: medium; margin-right: 5px;" class="large material-icons">favorite</i><%= post.total_likes %></p>
                 <% }%>
               </div>
               <div class="card-action">
-                <a style="color: var(--green-gold);" href="#">View Idea</a>
+                <a style="color: var(--green-gold);" href="/detailPostPage?post_id=<%= post._id %>">View Idea</a>
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@
 <!-- Tab Initialization Script -->
 <style>
   .fixed-card {
-    height: 320px;
+    height: 335px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -134,7 +134,7 @@
                   ${likesHTML}
                 </div>
                 <div class="card-action">
-                  <a style="color: var(--green-gold);" href="#">View Idea</a>
+                  <a style="color: var(--green-gold);" href="/detailPostPage?post_id=${post._id}">View Idea</a>
                 </div>
               </div>
             </div>

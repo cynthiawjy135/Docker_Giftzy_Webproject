@@ -144,6 +144,10 @@ const userService = {
     OTPStore.delete(email);
     return true;
   },
+  getUserById: async (id) => {
+        return await User.findById(id);
+  }, 
+
 };
 
 module.exports = userService;

@@ -56,4 +56,6 @@ router.get('/addPost', authMiddleware, (req, res) => {
 
 router.get('/communityMainPage', authMiddleware, postController.getCommunityMainPage);
 
+router.get('/detailPostPage', authMiddleware, postController.getDetailPostPage);
+
 module.exports = router;
