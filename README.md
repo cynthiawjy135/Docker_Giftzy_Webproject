@@ -21,7 +21,7 @@ Output:
    cd to project folder
    ```
    
-2. Please create .env file with with the necessary environment variables: Please refer to the .env.example:
+2. Please create .env file with with the necessary environment variables: Please refer to the .env.example and fill the variables as shown in Task 8.2HD submission pdf:
    ```
    MONGO_URI=
    JWT_SECRET=
